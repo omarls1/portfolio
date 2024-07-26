@@ -1,0 +1,57 @@
+.about {
+  background-color: #f9faffaf;
+  position: relative;
+  .image {
+    img {
+      height: 460px;
+      width: 100%;
+      border-radius: 40px;
+      box-shadow: 6px 9px 9px 0px #908f8f;
+      cursor: pointer;
+      border: 1px solid white;
+      transition: 1s;
+      &:hover {
+        transform: scale(1.05);
+
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  .text {
+    h3 {
+      font-weight: bold;
+      letter-spacing: 4.2px;
+      font-size: 55px;
+      color: #42186c;
+    }
+    hr {
+      color: rgb(0, 102, 255);
+    }
+    p {
+      margin-left: 5px;
+      line-height: 2.5;
+    }
+    p:last-of-type {
+      opacity: 0.9;
+      margin-left: 10px;
+      font-size: 20px;
+    }
+    button {
+      border: 2px solid #a25cc9;
+      padding: 16px;
+      float: right;
+      transition: all 1s;
+      font-family: $second-font;
+      font-size: 20px;
+      font-weight: bold;
+
+      &:hover {
+        box-shadow: $shadow;
+        background-color: #8747c7;
+        color: white;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

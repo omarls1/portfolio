@@ -1,0 +1,43 @@
+/* start HEADER */
+header {
+  box-shadow: $shadow;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 11111;
+  max-height: 200px;
+  background-color: #f8f9fa;
+  width: 100vw;
+  padding: 20px 0;
+  .header {
+    padding: 0;
+    nav {
+      width: 100%;
+      .navbar-brand {
+        font-family: $second-font;
+        font-weight: bold;
+        transition: 1s;
+        &:hover {
+          color: rgba(0, 0, 0, 0.663);
+        }
+      }
+      div {
+        &:nth-of-type(2) {
+          ul {
+            li {
+              padding: 5px 20px;
+              a {
+                font-weight: bold;
+                font-size: 17px;
+                letter-spacing: 2px;
+                font-style: italic;
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* end HEADER */

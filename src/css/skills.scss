@@ -1,0 +1,68 @@
+.skills {
+  background-color: whitesmoke;
+  position: relative;
+  .text {
+    text-align: center;
+    h3 {
+      text-align: left;
+    }
+  }
+  .list {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding: 40px 0;
+    transition: all 0.25s ease-in;
+    scroll-behavior: smooth;
+    .item {
+      box-shadow: 0px 5px 18px #b6aeaebf;
+      padding: 25px;
+      text-align: center;
+      position: relative;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: 1s;
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .icon {
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        background-color: #0d6efd;
+        color: white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        transition: 1s;
+        &:hover {
+          background-color: #0d4aa6;
+        }
+        > * {
+          vertical-align: -webkit-baseline-middle;
+        }
+      }
+    }
+  }
+  .prev-next {
+    text-align: center;
+    margin-top: 30px;
+    span {
+      width: 15px;
+      height: 15px;
+      border: 1px solid blue;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: blue;
+      }
+    }
+  }
+}
+::-webkit-scrollbar {
+  height: 0;
+}

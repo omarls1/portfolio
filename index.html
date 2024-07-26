@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+<style>
+  .load {
+  position: fixed;
+  z-index: 99999;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.96;
+}
+.loader {
+    width: 75px;
+    aspect-ratio: 1.154;
+    position: relative;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    background: conic-gradient(
+      from 120deg at 50% 64%,
+      #0000,
+      #3725b0 1deg 120deg,
+      #0000 121deg
+    );
+    animation: l27-0 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    transform-origin: 50% 66%;
+    animation: l27-1 1.5s infinite;
+  }
+  .loader:after {
+    --s: -1;
+  }
+  @keyframes l27-0 {
+    0%,
+    30% {
+      transform: rotate(0);
+    }
+    70% {
+      transform: rotate(120deg);
+    }
+    70.01%,
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes l27-1 {
+    0% {
+      transform: rotate(calc(var(--s, 1) * 120deg)) translate(0);
+    }
+    30%,
+    70% {
+      transform: rotate(calc(var(--s, 1) * 120deg))
+        translate(calc(var(--s, 1) * -5px), 10px);
+    }
+    100% {
+      transform: rotate(calc(var(--s, 1) * 120deg)) translate(0);
+    }
+  }
+</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my portfolio</title>
+  </head>
+  <body>
+    <div class="load" id="load">
+      <div class="loader"></div>
+    </div>
+    <header>
+      <div class="container-fluid container-lg header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <a class="navbar-brand px-2" href="#">my Name</a>
+          <div class="d-flex gap-2 px-2">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <button type="button" class="btn btn-outline-primary d-lg-none">
+              download CV
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">about me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#experience">experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">contact us</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="btn btn-outline-primary d-none d-lg-block"
+          >
+            download CV
+          </button>
+        </nav>
+      </div>
+    </header>
+    <div class="px-5 landing">
+      <div class=" container-md-lg">
+        <div class="row justify-content-between">
+          <div class="col-12 col-lg-7 mb-4 text">
+            <h5>welcome to my world</h5>
+            <h3>hello I am <span class="text-danger">JHON DOE</span></h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              iure modi iusto. Ipsum modi eaque, optio sit saepe asperiores
+              numquam vero! Autem nobis tempora maxime, sunt esse quo a
+              perspiciatis!
+            </p>
+            <button type="button" class="btn btn-outline-primary mt-4">
+              download CV
+            </button>
+          </div>
+          <div class="col-12 col-lg-4 image">
+            <img src="/programmer.png" class="img-fluid rounded-top" alt="" />
+          </div>
+        </div>
+        <div class="mt-4 icon">
+          <a href="#about" class="text-light"><i class="fa-solid fa-angles-down fa-bounce"></i></a>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="about">
+      <div class="container-md">
+        <h2 class="second-title">about me</h2>
+        <div class="row pt-4 p-lg-7 gap-4">
+          <div data-aos="fade-right" class="col-12 col-lg-5 image">
+            <img src="./me.jpg" alt="my name" />
+          </div>
+          <div class="col-12 col-lg-6 align-self-center text">
+            <h3 data-aos="zoom-in-right">Jhon Doe</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <hr />
+            <p data-aos="zoom-in">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              omnis nesciunt voluptas itaque commodi. Dignissimos quaerat in
+              molestiae quia id dolor temporibus, voluptate sint reiciendis
+              blanditiis rerum ducimus, fuga architecto.
+            </p>
+            <button data-aos="fade-up-left" type="button" class="btn">
+              <i class="fa-solid fa-download"></i> <span>download my cv</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="skills" class="skills">
+      <div class="container-md">
+        <div class="text">
+          <h3 class="second-title">My skills</div>
+          <h2 data-aos="zoom-in-right" class="title">My Soft Skills</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+            quae, repudiandae ad amet iste ipsa deleniti odio suscipit eaque,
+            ipsum at esse nostrum cupiditate, recusandae libero! Expedita minus
+            dolor nostrum.
+          </p>
+        </div>
+
+        <div data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" class="row px-5 gap-4 list">
+          <div class="col-12 col-lg-3 item">
+            <div class="icon"><i class="fa-brands fa-js"></i></div>
+            <h4 class="item-title">JavaScript</h4>
+            <p class="item-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              quae,
+            </p>
+            .
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                25%
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 item">
+            <div class="icon"><i class="fa-brands fa-python"></i></div>
+            <h4 class="item-title">Python</h4>
+            <p class="item-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              quae,
+            </p>
+            .
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                25%
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 item">
+            <div class="icon"><i class="fa-brands fa-html5"></i></div>
+            <h4 class="item-title">HTML</h4>
+            <p class="item-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              quae,
+            </p>
+            .
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                25%
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 item">
+            <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <h4 class="item-title">CSS</h4>
+            <p class="item-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              quae,
+            </p>
+            .
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                25%
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 item">
+            <div class="icon"><i class="fa-brands fa-java"></i></div>
+            <h4 class="item-title">Java</h4>
+            <p class="item-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              quae,
+            </p>
+            .
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                25%
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 item">
+            <div class="icon"><i class="fa-solid fa-database"></i></div>
+            <h4 class="item-title">MySql</h4>
+            <p class="item-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              quae,
+            </p>
+            .
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                25%
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="prev-next">
+          <span class="prev-btn"></span><span class="center-btn"></span
+          ><span class="next-btn"></span>
+        </div>
+      </div>
+    </div>
+    <div id="services" class="services">
+      <div class="container-md">
+        <h3 class="second-title">Services</h3>
+        <h2 data-aos="zoom-in-right" class="title">What I do ?</h2>
+        <p class="mx-lg-5 px-lg-5 parag">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
+          ipsa quam, ut officiis voluptates adipisci neque quos cumque natus
+          delectus sint placeat asperiores enim! Ducimus laboriosam minus
+          cupiditate accusamus asperiores!
+        </p>
+        <div class="row justify-content-center">
+          <div data-aos="zoom-in" class="col-lg-4 item">
+            <div class="row gap-1">
+              <div class="col-2 icon"><i class="fa-brands fa-github"></i></div>
+              <div class="col text">
+                <h4>title here</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Blanditiis
+                </p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="zoom-in" class="col-lg-4 item">
+            <div class="row gap-1">
+              <div class="col-2 icon"><i class="fa-brands fa-github"></i></div>
+              <div class="col text">
+                <h4>title here</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Blanditiis
+                </p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="zoom-in" class="col-lg-4 item">
+            <div class="row gap-1">
+              <div class="col-2 icon"><i class="fa-brands fa-github"></i></div>
+              <div class="col text">
+                <h4>title here</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Blanditiis
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="experience" class="resume">
+      <div class="container-md">
+        <h3 class="second-title">experience</h3>
+        <h2 data-aos="zoom-in-right" class="title">My experience</h2>
+        <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, culpa! Quis, labore! Vitae expedita similique, hic consequuntur tenetur rerum cupiditate maxime repellat esse cumque amet dolores, iusto incidunt id corporis?</p>
+        <div data-aos="zoom-in-left" class="card m">
+          <div class="row g-0">
+            <div class="col-md-2 image">
+              <img src="programmer.png">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                >
+                <i class="fa-solid fa-location-dot"></i> Camado
+                </button>
+                
+                <h5 class="card-title">job title</h5>
+                <p class="card-text"><small class="text-muted">job date 18/10/2005</small></p>
+                <hr class="text-primary">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="zoom-in-right" class="card m">
+          <div class="row g-0">
+            <div class="col-md-2 image">
+              <img src="programmer.png">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                >
+                  <i class="fa-solid fa-location-dot"></i> Camado
+                </button>
+                
+                <h5 class="card-title">job title</h5>
+                <p class="card-text"><small class="text-muted">job date 18/10/2005</small></p>
+                <hr class="text-primary">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="zoom-in-left" class="card m">
+          <div class="row g-0">
+            <div class="col-md-2 image">
+              <img src="programmer.png">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                >
+                  <i class="fa-solid fa-location-dot"></i> Camado
+                </button>
+                
+                <h5 class="card-title">job title</h5>
+                <p class="card-text"><small class="text-muted">job date 18/10/2005</small></p>
+                <hr class="text-primary">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="contact" id="contact">
+      <div class="container-md">
+        <h3 class="second-title">contact</h3>
+        <h2 class="title">contact us</h2>
+        <div class="row justify-content-between">
+          <figure data-aos="zoom-out-right" class="col-md-6">
+            <img src="contact.svg" alt="contact">
+          </figure>
+          <form data-aos="fade-up-left" class="col-md-5">
+            <h4>add any text here</h4>
+            <div class="mb-4">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="your name">
+            </div>
+            <div class="mb-4">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-4">
+              <label for="number" class="form-label">phone number</label>
+              <input type="tel" class="form-control" id="number" placeholder="your number">
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">message : </label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <div class="col-auto w-100">
+              <button type="submit" class="btn btn-primary mb-3 w-100 p-3">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <ul>
+          <li><a href="#about"><i class="fa-solid fa-address-card"></i> about me</a></li>
+          <li><a href="#skills"><i class="fa-solid fa-code"></i> skills</a></li>
+          <li><a href="#services"><i class="fa-solid fa-laptop"></i> services</a></li>
+          <li><a href="#experience"><i class="fa-solid fa-flask"></i> experience</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-address-book"></i> contact us</a></li>
+        </ul>
+
+      </div>
+      <hr>
+
+        <div class="row justify-content-between">
+          <p class="col">&copy; 2024 portfolio-1 , Designed by <a href="#">Omar Lammas</a></p>
+
+          <ul class="col social">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          </ul>
+
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

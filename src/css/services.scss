@@ -1,0 +1,40 @@
+.services {
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    background-image: radial-gradient(#dadbeb 2px, #ffffff 2px);
+    background-size: 40px 40px;
+    opacity: 0.9;
+    z-index: -1;
+  }
+  .parag {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 40px;
+  }
+  .item {
+    cursor: pointer;
+    .icon {
+      font-size: 43px;
+      color: #580d9e;
+      transition: 1s;
+      height: fit-content;
+      width: fit-content;
+      border-radius: 50%;
+      border: 1px solid transparent;
+
+      &:hover {
+        color: #24083d;
+        transform: scale(1.05);
+        margin-bottom: 5px;
+        border-color: #580d9e;
+      }
+    }
+  }
+}
